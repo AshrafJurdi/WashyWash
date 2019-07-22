@@ -1,0 +1,135 @@
+body {
+	background-color: orange;
+}
+
+/*-------------------------------------HISTORY------------------------------------------------*/
+
+/* Make the container relative */
+.History {
+	position: relative;
+	
+	max-width: 400px;
+}
+
+/* Select the image and make it absolute to the container */
+.History img {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	overflow: hidden;
+	/* Sets the width and height for the images*/
+	height: 30vh;
+	width: 10vw;
+}
+
+/* 
+	We set z-index to be higher than the back image, so it's alwyas on the front.
+
+We give it an opacity leaner to .25s, that way when we hover we will get a nice fading effect. 
+*/
+.History .historyicon {
+	z-index: 9999;
+	transition: opacity 0.5s linear;
+
+}
+
+/* When we hover the figure element, the block with .swap-on-hover, we want to use > so the front-image is going to have opacity of 0, which means it will be hidden, to the back image will show */
+.History:hover > .historyicon {
+	opacity: 0;
+}
+
+
+/*-----------------------------------------------MISSION------------------------------------------*/
+
+
+/* Make the container relative */
+.Mission {
+	position: relative;
+	
+	max-width: 400px;
+}
+
+/* Select the image and make it absolute to the container */
+.Mission img {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	overflow: hidden;
+	/* Sets the width and height for the images*/
+    height: 30vh;
+	width: 10vw;
+}
+
+/* 
+	We set z-index to be higher than the back image, so it's alwyas on the front.
+
+We give it an opacity leaner to .25s, that way when we hover we will get a nice fading effect. 
+*/
+.Mission .missionicon {
+	z-index: 9999;
+	transition: opacity 0.5s linear;
+
+}
+
+/* When we hover the figure element, the block with .swap-on-hover, we want to use > so the front-image is going to have opacity of 0, which means it will be hidden, to the back image will show */
+.Mission:hover > .missionicon{
+	opacity: 0;
+}
+
+
+/*-----------------------------------------------VISION-----------------------------------------*/
+
+
+
+/* Make the container relative */
+.Vision {
+	position: relative;
+	
+	max-width: 400px;
+}
+
+/* Select the image and make it absolute to the container */
+.Vision img {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	overflow: hidden;
+	/* Sets the width and height for the images*/
+	height: 30vh;
+	width: 10vw;
+}
+
+/* 
+	We set z-index to be higher than the back image, so it's alwyas on the front.
+
+We give it an opacity leaner to .25s, that way when we hover we will get a nice fading effect. 
+*/
+.Vision .visionicon {
+	z-index: 9999;
+	transition: opacity 0.5s linear;
+
+}
+
+/* When we hover the figure element, the block with .swap-on-hover, we want to use > so the front-image is going to have opacity of 0, which means it will be hidden, to the back image will show */
+.Vision:hover > .visionicon{
+	opacity: 0;
+}
+
+
+
+/*------------------------------------------------------------------------------------*/
+
+.About_Us_Icons {
+	display: grid;
+	grid-template-columns: 20% 20% 20%;
+	grid-gap: 15%;
+	margin-left: 15%;
+}
+.About_Us h1 {
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 5%;
+}
