@@ -39,7 +39,7 @@ class About_Us extends Component {
 							</p>
 						)}
 						<img
-							src={require('/home/raed/Documents/codi-docs/raed_projects/WashyWash/front/src/assets/images/histo.ico')}
+							src={require('../../assets/images/histo.ico')}
 							className="historyicon"
 							onMouseOver={this.displayHistory}
 							onMouseLeave={this.displayOff}
@@ -60,7 +60,7 @@ class About_Us extends Component {
 							</p>
 						)}
 						<img
-							src={require('/home/raed/Documents/codi-docs/raed_projects/WashyWash/front/src/assets/images/mission.png')}
+							src={require('../../assets/images/mission.png')}
 							className="missionicon"
 							onMouseOver={this.displayMission}
 							onMouseLeave={this.displayOff}
@@ -75,7 +75,7 @@ class About_Us extends Component {
 							</p>
 						)}
 						<img
-							src={require('/home/raed/Documents/codi-docs/raed_projects/WashyWash/front/src/assets/images/vision.png')} className="visionicon"
+							src={require('../../assets/images/vision.png')} className="visionicon"
 							onMouseOver={this.displayVision}
 							onMouseLeave={this.displayOff}
 						/>

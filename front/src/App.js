@@ -1,13 +1,14 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from "react";
+import Navbar from '../src/components/Navbar/Nav'
 import Footer from './components/Footer/footer';
-import About_Us from './components/About_Us/About_Us.test';
-import './components/About_Us/About_Us.css';
+
+
 
 function App() {
 	return (
 		<div className="App">
-			<About_Us />
+			<Navbar />
+			<Footer />
 		</div>
 	);
 }
