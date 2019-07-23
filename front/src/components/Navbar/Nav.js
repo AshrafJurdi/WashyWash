@@ -69,7 +69,7 @@ class Navbar extends React.Component {
 
         <main>
           <MDBContainer className="text-center my-5">
-           <About_Us/>
+           {/* <About_Us/> */}
           </MDBContainer>
         </main>
       </div>
