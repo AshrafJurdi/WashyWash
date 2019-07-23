@@ -45,6 +45,7 @@ class Navbar extends React.Component {
                     <MDBNavLink to="#">Profile</MDBNavLink>
                   </MDBNavItem>
                   <MDBBtn className="but" gradient="aqua">Log In / Sign up</MDBBtn>
+                  <a link to="#" className="text-right" className="text-center" className="UserText">UserName</a>
                 </MDBNavbarNav>
                 
               </MDBCollapse>
@@ -68,7 +69,7 @@ class Navbar extends React.Component {
 
         <main>
           <MDBContainer className="text-center my-5">
-           {/* <About_Us/> */}
+           <About_Us/>
           </MDBContainer>
         </main>
       </div>

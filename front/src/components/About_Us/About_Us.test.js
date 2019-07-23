@@ -40,11 +40,7 @@ class About_Us extends Component {
 						
 						:
 						<img
-<<<<<<< HEAD
 							src={require('../../assets/images/histo.ico')}
-=======
-							src={require('/home/raed/Documents/codi_docs/raed_projects/WashyWash/front/src/assets/images/histo.ico')}
->>>>>>> 4753a57a3bf7b0e8e32580ef0995d9f6c982bac0
 							className="historyicon"
 							onMouseOver={this.displayHistory}
 							// onMouseLeave={this.displayOff}
@@ -65,11 +61,7 @@ class About_Us extends Component {
 							</p>
 						:
 						<img
-<<<<<<< HEAD
 							src={require('../../assets/images/mission.png')}
-=======
-							src={require('/home/raed/Documents/codi_docs/raed_projects/WashyWash/front/src/assets/images/mission.png')}
->>>>>>> 4753a57a3bf7b0e8e32580ef0995d9f6c982bac0
 							className="missionicon"
 							onMouseOver={this.displayMission}
 							// onMouseLeave={this.displayOff}
@@ -85,11 +77,7 @@ class About_Us extends Component {
 							</p>
 						:
 						<img
-<<<<<<< HEAD
 							src={require('../../assets/images/vision.png')} className="visionicon"
-=======
-							src={require('/home/raed/Documents/codi_docs/raed_projects/WashyWash/front/src/assets/images/vision.png')} className="visionicon"
->>>>>>> 4753a57a3bf7b0e8e32580ef0995d9f6c982bac0
 							onMouseOver={this.displayVision}
 							// onMouseLeave={this.displayOff}
 						/>
