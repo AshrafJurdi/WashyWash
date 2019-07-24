@@ -1,5 +1,6 @@
 import React from "react";
 import Form from './components/Contact_Form/Contact_Form';
+import CardDetails from './components/CardDetails/CardDetails';
 
 function App() {
 	return (
@@ -9,7 +10,7 @@ function App() {
 				
 			</Router> */}
 
-			<Form />
+			<CardDetails/>
 		</div>
 	);
 }
