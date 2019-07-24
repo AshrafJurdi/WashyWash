@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import Navbar from '../src/components/Navbar/Nav'
-import Footer from './components/Footer/footer';
-import About_Us from './components/About_Us/About_Us.test'
+import React from "react";
+import Form from './components/Contact_Form/Contact_Form';
 
 function App() {
 	return (
 		<div className="App">
-			{/* <Navbar/> */}
-			<About_Us/>
-			{/* <Footer /> */}
+			{/* <Router>
+				<Route  exact path="/" component = {Home}></Route>
+				
+			</Router> */}
 
+			<Form />
 		</div>
 	);
 }
