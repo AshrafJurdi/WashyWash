@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import logo from '../../assets/images/logo.png'
 import '../Navbar/Nav.css'
 import About_Us from '..//About_Us/About_Us.test'
+import '../User_Popup/User_Popup.css'
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -45,7 +46,7 @@ class Navbar extends React.Component {
                     <MDBNavLink to="#">Profile</MDBNavLink>
                   </MDBNavItem>
                   <MDBBtn className="but" gradient="aqua">Log In / Sign up</MDBBtn>
-                  <a link to="#" className="text-right" className="text-center" className="UserText">UserName</a>
+                  <a href="#popup1" className="text-right" className="text-center" className="UserText">UserName</a>
                 </MDBNavbarNav>
                 
               </MDBCollapse>
