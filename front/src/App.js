@@ -6,6 +6,7 @@ import "./components/About_Us/About_Us.css";
 import ServiceCard from "./components/Service-Card/service-card";
 import LoginSignup from "./components/LoginSignup/login-signup";
 import Form from "./components/Contact_Form/Contact_Form";
+import CardDetails from "./components/CardDetails/CardDetails";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
 				
 			</Router> */}
 
-      <Form />
+      <CardDetails />
     </div>
   );
 }
