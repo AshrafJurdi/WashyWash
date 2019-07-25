@@ -1,0 +1,39 @@
+.Calendar_Button
+{
+    width: 100%;
+    /* background-color: black; */
+    display: grid;
+    grid-template-columns: 50% 10%;
+    grid-gap: 30%;
+}
+.button_one
+{margin-left: 120%;
+   
+}
+
+.Calendar_Center{
+    margin-left: 90%;
+    width: 20%;
+}
+
+.Orders_Table
+{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% ;
+    margin-top: 5%;
+    margin-left:30%;
+}
+
+
+.Flex_Radio
+{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+.Flex_Icons
+{
+    display: grid;
+    grid-template-columns: 5% 5%;
+    grid-gap: 30%;
+}

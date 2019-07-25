@@ -74,4 +74,10 @@
     font-family: 'Bangers', cursive;
   }
 
+  .UserText
+  {
+      text-decoration: none;
+      color: white;
+  }
+
   

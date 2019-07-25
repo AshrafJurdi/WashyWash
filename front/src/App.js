@@ -1,4 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
+import Navbar from "../src/components/Navbar/Nav";
+import User_Popup from "./components/User_Popup/User_Popup.test";
 import "./App.css";
 import Footer from "./components/Footer/footer";
 import About_Us from "./components/About_Us/About_Us.test";
@@ -16,9 +18,6 @@ function App() {
 				<Route  exact path="/" component = {Home}></Route>
 				
 			</Router> */}
-      <SignupForm />
-      <LoginForm />
-      <CardDetails />
     </div>
   );
 }
