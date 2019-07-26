@@ -1,4 +1,5 @@
 import React from 'react'
+import './Contact_Info.css';
 
 class Contact_Info extends React.Component {
 

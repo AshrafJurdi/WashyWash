@@ -10,14 +10,19 @@ import LoginForm from "./components/LoginSignup/login";
 import SignupForm from "./components/LoginSignup/signup";
 import Form from "./components/Contact_Form/Contact_Form";
 import CardDetails from "./components/CardDetails/CardDetails";
+import Contact_Info  from './components/Contact_Info/Contact_Info.test'
 
 function App() {
   return (
     <div className="App">
+		<CardDetails/>
+		{/* <User_Popup /> */}
       {/* <Router>
 				<Route  exact path="/" component = {Home}></Route>
 				
 			</Router> */}
+			
+			
     </div>
   );
 }
