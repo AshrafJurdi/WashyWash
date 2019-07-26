@@ -1,5 +1,5 @@
 import React from "react";
-import "./signup.css";
+import "./edit_profile.css";
 import {
   MDBContainer,
   MDBRow,
@@ -11,7 +11,7 @@ import {
   MDBCloseIcon
 } from "mdbreact";
 
-const SignupForm = () => {
+const EditForm = () => {
   return (
     <div className="sign-component">
       <MDBContainer>
@@ -22,7 +22,7 @@ const SignupForm = () => {
                 <MDBCloseIcon />
                 <MDBRow className="d-flex justify-content-start">
                   <h3 className="deep-grey-text mt-3 mb-4 pb-1 mx-5">
-                    Sign up
+                    Edit Profile
                   </h3>
                 </MDBRow>
               </div>
@@ -80,32 +80,13 @@ const SignupForm = () => {
                   error="wrong"
                   success="right"
                 />
-                <div className="md-form pb-3">
-                  <div className="form-check my-4">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="defaultCheck17"
-                    />
-                    <label
-                      className="form-check-labe black-text"
-                      htmlFor="defaultCheck17"
-                    >
-                      Accept the
-                      <a href="#!" className="red-text font-weight-bold">
-                        Terms and Conditions
-                      </a>
-                    </label>
-                  </div>
-                </div>
                 <div className="text-center mb-4 mt-5">
                   <MDBBtn
                     color="danger"
                     type="button"
                     className="btn-block z-depth-2"
                   >
-                    Sign up
+                    Edit
                   </MDBBtn>
                 </div>
               </MDBCardBody>
@@ -116,4 +97,4 @@ const SignupForm = () => {
     </div>
   );
 };
-export default SignupForm;
+export default EditForm;
