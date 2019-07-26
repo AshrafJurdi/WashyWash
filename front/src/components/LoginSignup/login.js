@@ -1,5 +1,6 @@
 import React from "react";
-import "./login-signup.css";
+import SignupForm from "./signup";
+import "./login.css";
 import {
   MDBContainer,
   MDBRow,
@@ -10,7 +11,7 @@ import {
   MDBInput
 } from "mdbreact";
 
-const LoginSignup = () => {
+const LoginForm = () => {
   return (
     <div className="login-component">
       <MDBContainer>
@@ -48,7 +49,10 @@ const LoginSignup = () => {
                 </div>
                 <p className="font-small grey-text d-flex justify-content-center">
                   Don't have an account?
-                  <a href="#!" className="dark-grey-text font-weight-bold ml-1">
+                  <a
+                    href="<SignupForm />"
+                    className="dark-grey-text font-weight-bold ml-1"
+                  >
                     Sign up
                   </a>
                 </p>
@@ -60,4 +64,4 @@ const LoginSignup = () => {
     </div>
   );
 };
-export default LoginSignup;
+export default LoginForm;
