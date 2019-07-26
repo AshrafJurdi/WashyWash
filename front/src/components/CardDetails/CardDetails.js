@@ -8,7 +8,8 @@ import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol }
 
 class CardDetails extends React.Component {
 state = {
-  modal14: false
+  modal14: false,
+  Details: ["Order # 10","Pants,Tops,Socks","Pending","50$","10/10/2019"]
 }
 
 toggle = nr => () => {
@@ -38,11 +39,12 @@ render() {
           <img className="CardDetails-Logo" src={require('../../assets/images/logo.png')} alt="logo" />
           </MDBModalHeader>
           <MDBModalBody>
-        <p className="mdb-color white-text">Order Number: example 1</p>
-        <p className="mdb-color white-text">Items: example 2</p>
+            {this.state.Details.map(p => (<p  className="mdb-color white-text">{p} </p>))}
+        
+        {/* <p className="mdb-color white-text">Items: example 2</p>
         <p className="mdb-color white-text">Status: example 3</p>
         <p className="mdb-color white-text">Price: example 4</p>
-        <p className="mdb-color white-text">Date Ordered: example 5</p>
+        <p className="mdb-color white-text">Date Ordered: example 5</p> */}
                 
           </MDBModalBody>
           <MDBModalFooter>
