@@ -7,7 +7,10 @@ class About_Us extends Component {
     this.state = {
       toggleHistory: false,
       toggleMission: false,
-      toggleVision: false
+      toggleVision: false,
+      infoHistory:'WashyWash is a company that is set out to change how people clean their clothes globally, switching people from the outdatedPERC Dry Clean system to our EcoClean technology.',
+      infoMission:'WashyWash is a company that is set out to change how people clean their clothes globally, switching people from the outdatedPERC Dry Clean system to our EcoClean technology.',
+      infoVision:'VIsion is a company that is set out to change how people clean their clothes globally, switching people from the outdatedPERC Dry Clean system to our EcoClean technology.',
     };
   }
 
@@ -37,9 +40,7 @@ class About_Us extends Component {
           <div className="History">
             {this.state.toggleHistory ? (
               <p onMouseLeave={this.displayOff}>
-                WashyWash is a company that is set out to change how people
-                clean their clothes globally, switching people from the outdated
-                PERC Dry Clean system to our EcoClean technology.
+                {this.state.infoHistory}
               </p>
             ) : (
               <img
@@ -58,9 +59,7 @@ class About_Us extends Component {
           <div className="Mission">
             {this.state.toggleMission ? (
               <p onMouseLeave={this.displayOff}>
-                WashyWash is a company that is set out to change how people
-                clean their clothes globally, switching people from the outdated
-                PERC Dry Clean system to our EcoClean technology.
+                {this.state.infoMission}
               </p>
             ) : (
               <img
@@ -74,9 +73,7 @@ class About_Us extends Component {
           <div className="Vision">
             {this.state.toggleVision ? (
               <p onMouseLeave={this.displayOff}>
-                WashyWash is a company that is set out to change how people
-                clean their clothes globally, switching people from the outdated
-                PERC Dry Clean system to our EcoClean technology.
+               {this.state.infoVision}
               </p>
             ) : (
               <img

@@ -1,55 +1,59 @@
-.Contact_Map_Info
-{
-
-    height: 50vh;
-    width: 80vw;
-   margin: 5% auto;
-   /* border: 1px solid; */
-   display: grid;
-   grid-template-columns: 30% 30%;
+.Contact_Map_Info {
+  height: 50vh;
+  width: 80vw;
+  margin: 5% auto;
+  /* border: 1px solid; */
+  display: grid;
+  grid-template-columns: 30% 30%;
 }
 
-.Contact_Map_Info h1{
-    padding-left: 50%;
-    text-decoration: underline;
+.Contact_Map_Info h1 {
+  padding-left: 50%;
+  text-decoration: underline;
 }
- ul
- {padding-left: 5%;
-    padding-top: 15%;
+ul {
+  padding-top: 15%;
   list-style: none;
-
 }
-a{
-    text-decoration: none;
-}
-
-.Social_Media{
-    display: grid;
-    grid-template-columns: 5% 5%;
-    grid-gap: 5%;
-    padding-left: 5%;
-    padding-top: 10%;
-}
-#facebook:hover{
-    transition: all .2s ease-in-out;
-    
-    transform: scale(1.7);
-}
-#insta:hover{
-    transition: all .2s ease-in-out;
-    
-    transform: scale(1.7);
-}
-.Contact_Map_Info p{
-    padding-left: 5%;
-    padding-top: 15%;
-    
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.Contact_Map{
-    padding-left: 45%;
-   
+a :active {
+  text-decoration: none;
+  color: black;
 }
-iframe{
-    border: none;
+
+.Social_Media {
+  display: grid;
+  grid-template-columns: 5% 5%;
+  grid-gap: 10%;
+  padding-left: 30%;
+  padding-top: 10%;
+}
+#facebook:hover {
+  transition: all 0.2s ease-in-out;
+
+  transform: scale(1.7);
+}
+#insta:hover {
+  transition: all 0.2s ease-in-out;
+
+  transform: scale(1.7);
+}
+.Contact_Map_Info p {
+  padding-left: 5%;
+  padding-top: 15%;
+}
+
+.Contact_Map {
+  padding-left: 45%;
+}
+iframe {
+  border: none;
+}
+
+.Find_Us {
+  margin-left: 25%;
 }
