@@ -18,7 +18,6 @@ import Contact_Form from "./components/Contact_Form/Contact_Form";
 function App() {
   return (
     <div className="App">
-      <CardDetails />
       {/* <User_Popup /> */}
       {/* <Router>
 				<Route  exact path="/" component = {Home}></Route>

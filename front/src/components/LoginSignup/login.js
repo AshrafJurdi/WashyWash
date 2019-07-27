@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SignupForm from "./signup";
 import "./login.css";
 import {
@@ -8,10 +8,18 @@ import {
   MDBBtn,
   MDBCard,
   MDBCardBody,
-  MDBInput
+  MDBInput,
+  MDBCloseIcon
 } from "mdbreact";
 
 const LoginForm = () => {
+  const [login, setlogin] = useState([
+    {
+      email: "",
+      password: ""
+    }
+  ]);
+  console.log(login);
   return (
     <div className="login-component">
       <MDBContainer>
@@ -19,6 +27,7 @@ const LoginForm = () => {
           <MDBCol md="6">
             <MDBCard>
               <div className="header pt-3 grey lighten-2">
+                <MDBCloseIcon />
                 <MDBRow className="d-flex justify-content-start">
                   <h3 className="deep-grey-text mt-3 mb-4 pb-1 mx-5">Log in</h3>
                 </MDBRow>

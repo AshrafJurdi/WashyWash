@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./signup.css";
 import {
   MDBContainer,
@@ -12,6 +12,17 @@ import {
 } from "mdbreact";
 
 const SignupForm = () => {
+  const [signup, setsignup] = useState([
+    {
+      firstname: "",
+      middlename: "",
+      lastname: "",
+      email: "",
+      password: "",
+      confirmpassword: ""
+    }
+  ]);
+  console.log(signup);
   return (
     <div className="sign-component">
       <MDBContainer>

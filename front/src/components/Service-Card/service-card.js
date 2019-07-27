@@ -6,9 +6,14 @@ import mission from "../../assets/images/mission.png";
 const ServiceCard = () => {
   const [services, setServices] = useState([
     {
-      title: "hello",
+      title: "Service 1",
       picture: mission,
       description: "raed"
+    },
+    {
+      title: "Service 2",
+      picture: mission,
+      description: "adsfdsf"
     }
   ]);
 
@@ -27,6 +32,7 @@ const ServiceCard = () => {
           >
             <FrontSide className="frontside">
               <img className="card-image" src={service.picture} alt="" />
+              <h4>{service.title}</h4>
             </FrontSide>
             <BackSide className="backside">
               <p>{service.description}</p>

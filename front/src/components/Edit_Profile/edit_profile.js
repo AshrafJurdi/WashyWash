@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./edit_profile.css";
 import {
   MDBContainer,
@@ -12,6 +12,17 @@ import {
 } from "mdbreact";
 
 const EditForm = () => {
+  const [edit, setedit] = useState([
+    {
+      firstname: "",
+      middlename: "",
+      lastname: "",
+      email: "",
+      password: "",
+      confirmpassword: ""
+    }
+  ]);
+  console.log(edit);
   return (
     <div className="sign-component">
       <MDBContainer>
