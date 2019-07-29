@@ -82,28 +82,7 @@ class Navbar extends React.Component {
               </MDBCollapse>
             </MDBNavbar>
           </Router>
-
-          <MDBView src="https://mdbootstrap.com/img/Photos/Others/img%20(40).jpg">
-            <MDBMask
-              overlay="purple-light"
-              className="flex-center flex-column text-white text-center"
-            >
-              <img
-                className="center"
-                src={require("../../assets/images/washy.png")}
-              />
-              <h1 className="text-1"> We Spin</h1>
-
-              <h1 className="text-2">Your World</h1>
-            </MDBMask>
-          </MDBView>
         </header>
-
-        <main>
-          <MDBContainer className="text-center my-5">
-            <About_Us />
-          </MDBContainer>
-        </main>
       </div>
     );
   }

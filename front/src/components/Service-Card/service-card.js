@@ -19,8 +19,9 @@ const ServiceCard = () => {
 
   return (
     <div>
-      {services.map(service => (
-        <div className="card-div">
+      <h1 className="Service-Title">Services</h1>
+      <div className="card-div">
+        {services.map(service => (
           <Flippy
             flipOnHover={true} // default false
             flipOnCick={false} // default false
@@ -38,8 +39,8 @@ const ServiceCard = () => {
               <p>{service.description}</p>
             </BackSide>
           </Flippy>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

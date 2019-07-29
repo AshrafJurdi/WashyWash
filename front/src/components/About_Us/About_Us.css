@@ -1,65 +1,27 @@
-
-*{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-/* body {
-	background-color: orange;
-} */
-
-/*-------------------------------------HISTORY------------------------------------------------*/
-
-
-
-.History img {
-    height: 30vh;
-	width: 10vw;
+.card-image {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 250px;
 }
-.History img:hover {
-	/* transition: all 0.5s ease-in-out;
-    transform: rotateY('180'); */
+.About_Us {
+  min-height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-/*-----------------------------------------------MISSION------------------------------------------*/
-
-
-
-.Mission img {
-    height: 30vh;
-	width: 10vw;
+.flippy-card {
+  padding: 0;
+  margin: 0;
 }
-
-
-
-
-
-/*-----------------------------------------------VISION-----------------------------------------*/
-
-
-
-
-
-.Vision img {
-    height: 30vh;
-	width: 10vw;
-}
-
-
-/*------------------------------------------------------------------------------------*/
-
-.About_Us_Icons {
-	display: grid;
-	grid-template-columns: 20% 20% 20%;
-	grid-gap: 15%;
-	margin-left: 15%;
-}
-.About_Us h1 {
-	text-align: center;
-	text-decoration: underline;
-	margin-bottom: 5%;
-}
-.About_Us{
-
-
+.About-Title {
+  text-align: center;
+  font-weight: bold;
 }

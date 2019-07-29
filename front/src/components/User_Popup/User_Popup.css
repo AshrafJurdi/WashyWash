@@ -1,75 +1,72 @@
 .overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-  }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
-  }
-  .popup {
-    margin: 45px auto;
-   
-background-color: white;
-    border-radius: 5px;
-    width: 80%;
-    height: 100%;
-    position: relative;
-    transition: all 2s ease-in-out;
-  }
-  .popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-  }
-  .popup .content {
-    height: 70%;
-    overflow: auto;
-  }
- 
-  .Grid_Popup{
-      align-items: center;
-grid-gap: 10%;
-padding-left: 30%;
-padding-top: 5%;
-      display: grid;
-      grid-template-columns: 20% 20%;
-      grid-gap: 30%;
-  }
-  .Log_Out_Button
-  {
-      width:50vw;
-  }
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 45px auto;
 
-  .nav-tabs .nav-link
-  {
-width: 45%;
-  }
-  .nav-tabs .nav-item{
-      text-align: center;
-  }
- 
-  .btn-outline-dark:hover{
-      background-color: #333;
-  }
+  background-color: white;
+  border-radius: 5px;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  transition: all 2s ease-in-out;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .content {
+  height: 70%;
+  overflow: auto;
+}
 
-  .Cards_Popup
-  {
-       
-      display: grid;
-      grid-template-columns: 30% 30%;
- margin-left: 20%;
+.Grid_Popup {
+  align-items: center;
+  grid-gap: 10%;
+  padding-left: 30%;
+  padding-top: 5%;
+  display: grid;
+  grid-template-columns: 20% 20%;
+  grid-gap: 30%;
+  margin-top: 10%;
+}
+.Log_Out_Button {
+  width: 50vw;
+}
 
- grid-gap: 10%;
-  }
+.nav-tabs .nav-link {
+  width: 45%;
+}
+.nav-tabs .nav-item {
+  text-align: center;
+}
+
+.btn-outline-dark:hover {
+  background-color: #333;
+}
+
+.Cards_Popup {
+  display: grid;
+  grid-template-columns: 30% 30%;
+  margin-left: 20%;
+
+  grid-gap: 10%;
+}

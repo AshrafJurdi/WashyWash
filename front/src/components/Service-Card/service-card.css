@@ -10,7 +10,6 @@
   height: 250px;
 }
 .card-div {
-  background: rgb(104, 219, 219);
   min-height: 400px;
   width: 100%;
   display: flex;
@@ -21,4 +20,8 @@
 .flippy-card {
   padding: 0;
   margin: 0;
+}
+.Service-Title {
+  text-align: center;
+  font-weight: bold;
 }
