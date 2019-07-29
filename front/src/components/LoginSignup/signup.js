@@ -22,6 +22,25 @@ const SignupForm = () => {
       confirmpassword: ""
     }
   ]);
+
+  const handleChange = event => {
+    event.preventDefault();
+    var firstname = document.querySelector('[name="firstname"]').value;
+    var middlename = document.querySelector('[name="middlename"]').value;
+    var lastname = document.querySelector('[name="lastname"]').value;
+    var email = document.querySelector('[name="email"]').value;
+    var pass = document.querySelector('[name="password"]').value;
+    var confirmpassword = document.querySelector('[name="confirmpassword"]')
+      .value;
+    setsignup({
+      firstname: firstname,
+      middlename: middlename,
+      lastname: lastname,
+      email: email,
+      password: pass,
+      confirmpassword: confirmpassword
+    });
+  };
   console.log(signup);
   return (
     <div className="sign-component">
@@ -46,6 +65,8 @@ const SignupForm = () => {
                   validate
                   error="wrong"
                   success="right"
+                  name="firstname"
+                  onChange={handleChange}
                 />
                 <MDBInput
                   label="Your middle name"
@@ -55,6 +76,8 @@ const SignupForm = () => {
                   validate
                   error="wrong"
                   success="right"
+                  name="middlename"
+                  onChange={handleChange}
                 />
                 <MDBInput
                   label="Your last name"
@@ -64,6 +87,8 @@ const SignupForm = () => {
                   validate
                   error="wrong"
                   success="right"
+                  name="lastname"
+                  onChange={handleChange}
                 />
                 <MDBInput
                   label="Your email"
@@ -73,6 +98,8 @@ const SignupForm = () => {
                   validate
                   error="wrong"
                   success="right"
+                  name="email"
+                  onChange={handleChange}
                 />
 
                 <MDBInput
@@ -81,6 +108,8 @@ const SignupForm = () => {
                   group
                   type="password"
                   validate
+                  name="password"
+                  onChange={handleChange}
                 />
                 <MDBInput
                   label="Confirm your password"
@@ -90,6 +119,8 @@ const SignupForm = () => {
                   validate
                   error="wrong"
                   success="right"
+                  name="confirmpassword"
+                  onChange={handleChange}
                 />
                 <div className="md-form pb-3">
                   <div className="form-check my-4">

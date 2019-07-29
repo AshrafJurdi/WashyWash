@@ -45,8 +45,13 @@ class Navbar extends React.Component {
               expand="md"
               scrolling
               transparent
+              className="landing-nav-bar"
             >
-              <img className="Image" src={logo} alt="logo" />
+              <img
+                className="Image"
+                src="https://www.washywash.com/image/cache/static/logo-824x159.png"
+                alt="logo"
+              />
 
               {!this.state.isWideEnough && (
                 <MDBNavbarToggler onClick={this.onClick} />

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import SignupForm from "./signup";
-import "./login.css";
+import "./cmslogin.css";
 import {
   MDBContainer,
   MDBRow,
@@ -12,13 +11,11 @@ import {
   MDBCloseIcon
 } from "mdbreact";
 
-const LoginForm = () => {
-  const [login, setlogin] = useState([
-    {
-      email: "",
-      password: ""
-    }
-  ]);
+const CMSLoginForm = () => {
+  const [login, setlogin] = useState({
+    email: "",
+    password: ""
+  });
 
   const handleChange = event => {
     event.preventDefault();
@@ -40,6 +37,7 @@ const LoginForm = () => {
                 </MDBRow>
               </div>
               <MDBCardBody className="mx-4 mt-4">
+                <h1>{login.password}</h1>
                 <MDBInput
                   label="Your email"
                   group
@@ -72,12 +70,6 @@ const LoginForm = () => {
                     Log in
                   </MDBBtn>
                 </div>
-                <p className="font-small grey-text d-flex justify-content-center">
-                  Don't have an account?
-                  <a href="#!" className="dark-grey-text font-weight-bold ml-1">
-                    Sign up
-                  </a>
-                </p>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
@@ -86,4 +78,4 @@ const LoginForm = () => {
     </div>
   );
 };
-export default LoginForm;
+export default CMSLoginForm;
