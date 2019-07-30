@@ -14,17 +14,22 @@ import Test from "./components/test";
 import User_Popup from "./components/User_Popup/User_Popup.test";
 import Contact_Info from "./components/Contact_Info/Contact_Info.test";
 import Contact_Form from "./components/Contact_Form/Contact_Form";
+// import About_Us_Updated from "./components/About_Us_Updated/About_Us_Updated";
 import LandingPage from "./pages/Landing Page/landingPage";
 
 function App() {
   return (
     <div className="App">
       <LandingPage />
-      <User_Popup />
+     
+      
       {/* <Router>
 				<Route  exact path="/" component = {Home}></Route>
 				
-			</Router> */}
+      </Router> */}
+      {/* <About_Us_Updated /> */}
+      <Navbar />
+      <User_Popup />
     </div>
   );
 }

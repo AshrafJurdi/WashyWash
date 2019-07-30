@@ -1,0 +1,41 @@
+.Card_Image {
+  height: 50%;
+  width: 50%;
+}
+.Card_Body {
+  width: 60%;
+}
+.Cards_Products {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  grid-gap: 10%;
+  margin-left: 15%;
+  margin-top: 10%;
+}
+.Icons {
+  display: grid;
+  grid-template-columns: 5% 5%;
+  grid-gap: 30%;
+}
+.Button_Add_Products {
+  margin-left: 90%;
+  margin-top: 1%;
+}
+.Products span {
+  cursor: pointer;
+}
+.Card_Image {
+  margin-left: 25%;
+}
+.Card_Body {
+  margin-left: 20%;
+  padding-top: 20%;
+}
+.Products a {
+  text-decoration: none;
+  color: black;
+}
+.Products a:hover {
+  text-decoration: none;
+  color: white;
+}
