@@ -8,19 +8,17 @@ export default class Products extends React.Component {
     this.state = {
       clothes: [
         {
-          Image: "../../Assets/jeans.jpeg",
+          Image: "../../Assets/Images/jeans.jpeg",
           Name: "Jeans",
           Price: "33"
         },
         {
-          Image:
-            "/home/raed/Desktop/WashyWash/admin/src/Assets/Images/shirt.jpg",
+          Image: "../../Assets/Images/shirt.jpg",
           Name: "Shirt",
           Price: "15"
         },
         {
-          Image:
-            "/home/raed/Desktop/WashyWash/admin/src/Assets/Images/socks.jpg",
+          Image: "../../Assets/Images/socks.jpg",
           Name: "socks",
           Price: "15"
         }
@@ -73,7 +71,7 @@ export default class Products extends React.Component {
                 <Card.Img
                   className="Card_Image"
                   variant="top"
-                  src={require("/home/raed/Desktop/WashyWash/admin/src/Assets/Images/jeans.jpeg")}
+                  src={require("../../Assets/Images/jeans.jpeg")}
                 />
                 <Card.Body className="Card_Body">
                   <Card.Text>Name:{item.Name}</Card.Text>

@@ -12,10 +12,15 @@ import CMSLoginForm from "./Components/Login/cmslogin";
 function App() {
   return (
     <div className="App">
+      <Orders_Updated />
+      <Users />
       <Header />
       <NavBar />
       {/* <Orders_Updated /> */}
       {/* <Users /> */}
+
+      <Products />
+      <CMSLoginForm />
     </div>
   );
 }
