@@ -6,7 +6,7 @@ import CMSLoginForm from "./Components/Login/cmslogin";
 function App() {
   return (
     <div className="App">
-      <CMSLoginForm />
+      <Orders />
     </div>
   );
 }
