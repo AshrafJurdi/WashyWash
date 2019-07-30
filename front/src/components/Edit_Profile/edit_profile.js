@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./signup.css";
+import "./edit_profile.css";
 import {
   MDBContainer,
   MDBRow,
@@ -11,8 +11,8 @@ import {
   MDBCloseIcon
 } from "mdbreact";
 
-const SignupForm = () => {
-  const [signup, setsignup] = useState([
+const EditForm = () => {
+  const [edit, setedit] = useState([
     {
       firstname: "",
       middlename: "",
@@ -22,26 +22,7 @@ const SignupForm = () => {
       confirmpassword: ""
     }
   ]);
-
-  const handleChange = event => {
-    event.preventDefault();
-    var firstname = document.querySelector('[name="firstname"]').value;
-    var middlename = document.querySelector('[name="middlename"]').value;
-    var lastname = document.querySelector('[name="lastname"]').value;
-    var email = document.querySelector('[name="email"]').value;
-    var pass = document.querySelector('[name="password"]').value;
-    var confirmpassword = document.querySelector('[name="confirmpassword"]')
-      .value;
-    setsignup({
-      firstname: firstname,
-      middlename: middlename,
-      lastname: lastname,
-      email: email,
-      password: pass,
-      confirmpassword: confirmpassword
-    });
-  };
-  console.log(signup);
+  console.log(edit);
   return (
     <div className="sign-component">
       <MDBContainer>
@@ -52,7 +33,7 @@ const SignupForm = () => {
                 <MDBCloseIcon />
                 <MDBRow className="d-flex justify-content-start">
                   <h3 className="deep-grey-text mt-3 mb-4 pb-1 mx-5">
-                    Sign up
+                    Edit Profile
                   </h3>
                 </MDBRow>
               </div>
@@ -65,8 +46,6 @@ const SignupForm = () => {
                   validate
                   error="wrong"
                   success="right"
-                  name="firstname"
-                  onChange={handleChange}
                 />
                 <MDBInput
                   label="Your middle name"
@@ -76,8 +55,6 @@ const SignupForm = () => {
                   validate
                   error="wrong"
                   success="right"
-                  name="middlename"
-                  onChange={handleChange}
                 />
                 <MDBInput
                   label="Your last name"
@@ -87,8 +64,6 @@ const SignupForm = () => {
                   validate
                   error="wrong"
                   success="right"
-                  name="lastname"
-                  onChange={handleChange}
                 />
                 <MDBInput
                   label="Your email"
@@ -98,8 +73,6 @@ const SignupForm = () => {
                   validate
                   error="wrong"
                   success="right"
-                  name="email"
-                  onChange={handleChange}
                 />
 
                 <MDBInput
@@ -108,8 +81,6 @@ const SignupForm = () => {
                   group
                   type="password"
                   validate
-                  name="password"
-                  onChange={handleChange}
                 />
                 <MDBInput
                   label="Confirm your password"
@@ -119,35 +90,14 @@ const SignupForm = () => {
                   validate
                   error="wrong"
                   success="right"
-                  name="confirmpassword"
-                  onChange={handleChange}
                 />
-                <div className="md-form pb-3">
-                  <div className="form-check my-4">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="defaultCheck17"
-                    />
-                    <label
-                      className="form-check-labe black-text"
-                      htmlFor="defaultCheck17"
-                    >
-                      Accept the
-                      <a href="#!" className="red-text font-weight-bold">
-                        Terms and Conditions
-                      </a>
-                    </label>
-                  </div>
-                </div>
                 <div className="text-center mb-4 mt-5">
                   <MDBBtn
                     color="danger"
                     type="button"
                     className="btn-block z-depth-2"
                   >
-                    Sign up
+                    Edit
                   </MDBBtn>
                 </div>
               </MDBCardBody>
@@ -158,4 +108,4 @@ const SignupForm = () => {
     </div>
   );
 };
-export default SignupForm;
+export default EditForm;

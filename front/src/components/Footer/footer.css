@@ -105,3 +105,9 @@
 .follow-us {
   padding-top: 6%;
 }
+.left-ul a:hover {
+  color: #252534;
+}
+.right-ul a:hover {
+  color: #252534;
+}
