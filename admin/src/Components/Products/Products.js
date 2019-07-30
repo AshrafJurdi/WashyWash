@@ -8,8 +8,7 @@ export default class Products extends React.Component {
     this.state = {
       clothes: [
         {
-          Image:
-            "/home/raed/Desktop/WashyWash/admin/src/Assets/Images/jeans.jpeg",
+          Image: "../../Assets/jeans.jpeg",
           Name: "Jeans",
           Price: "33"
         },
