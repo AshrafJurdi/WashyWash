@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MaterialTable from "material-table";
+import { MDBInput } from 'mdbreact';
 
 export default function MaterialTableDemo() {
   const [state, setState] = useState({
