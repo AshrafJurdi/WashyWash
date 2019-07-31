@@ -1,0 +1,15 @@
+.layout{
+    margin:20px;
+}
+
+.button{
+    float:right;
+}
+
+.svg-inline--fa.fa-w-14{
+    cursor:pointer;
+}
+
+.edit{
+    cursor: pointer;
+}
