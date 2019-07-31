@@ -8,19 +8,14 @@ import Users from "./Components/Users/Users";
 import Products from "./Components/Products/Products";
 // import User_Popup from "../../front/src/components/User_Popup/User_Popup.test";
 import CMSLoginForm from "./Components/Login/cmslogin";
+import ChooseProducts from "./Components/Choose Products/chooseProducts";
 
 function App() {
   return (
     <div className="App">
-      <Orders_Updated />
-      <Users />
       <Header />
       <NavBar />
-      {/* <Orders_Updated /> */}
-      {/* <Users /> */}
-
-      <Products />
-      <CMSLoginForm />
+      <ChooseProducts />
     </div>
   );
 }
