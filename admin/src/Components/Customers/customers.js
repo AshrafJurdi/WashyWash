@@ -1,8 +1,21 @@
 import React from "react";
-import { MDBTable, MDBTableBody, MDBTableHead, MDBBtn } from "mdbreact";
+import {
+  MDBTable,
+  MDBTableBody,
+  MDBTableHead,
+  MDBBtn,
+  MDBContainer,
+  MDBModal,
+  MDBModalBody,
+  MDBModalHeader,
+  MDBModalFooter,
+  MDBInput
+} from "mdbreact";
 import "./customers.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import SignupForm from "../SignUp/signup.js";
+import "../SignUp/signup.css";
 
 class Customers extends React.Component {
   constructor(props) {
@@ -15,7 +28,7 @@ class Customers extends React.Component {
           L_Name: "Last Name",
           C_Id: "Customer Id",
           U_name: "Username",
-          P_Number: "Phone NUmber"
+          
         }
       ],
       clothes: [
@@ -25,7 +38,7 @@ class Customers extends React.Component {
           Last_Name: "33",
           Customer_Id: "55",
           User_Name: "fh",
-          Phone_Number: "37"
+          
         },
         {
           First_Name: "Samir",
@@ -33,9 +46,10 @@ class Customers extends React.Component {
           Last_Name: "22",
           Customer_Id: "2",
           User_Name: "kksf",
-          Phone_Number: "353"
+          
         }
-      ]
+      ],
+      modal14: false
     };
     // ----------------------------------------------------------------------------------
     // this.state = {
@@ -46,6 +60,13 @@ class Customers extends React.Component {
     //  }
   }
 
+  toggle = nr => () => {
+    let modalNumber = "modal" + nr;
+    this.setState({
+      [modalNumber]: !this.state[modalNumber]
+    });
+  };
+
   deleteData = index => {
     let data = this.state.clothes;
     delete data[index];
@@ -53,29 +74,76 @@ class Customers extends React.Component {
     console.log(data);
   };
 
+  editData = index => {
+    let datas = this.state.clothes;
+
+    datas[index].First_Name = prompt("Please edit First Name");
+    datas[index].Middle_Name = prompt("Please edit Middle Name");
+    this.setState({ datas });
+  };
+
+  addData = () => {
+    let Info = this.state.clothes;
+    var a = {
+      First_Name: "",
+      Middle_Name: "",
+      Last_Name: "",
+      Customer_Id: "",
+      User_Name: "",
+     
+    };
+
+    Info.push(a);
+    this.setState({ Info });
+  };
+
   render() {
     return (
       <div className="layout">
         <div>
-          <MDBBtn color="primary" className="button">
-            Add Customer
-          </MDBBtn>
+          <MDBContainer>
+            <MDBBtn
+              className="button"
+              color="primary"
+              onClick={this.toggle(14)}
+            >
+              Add Customer
+            </MDBBtn>
+            <MDBModal
+              isOpen={this.state.modal14}
+              toggle={this.toggle(14)}
+              centered
+            >
+              <MDBModalHeader toggle={this.toggle(14)}>
+                Add A Customer
+              </MDBModalHeader>
+              <MDBModalBody>
+                <SignupForm />
+              </MDBModalBody>
+              <MDBModalFooter>
+                <MDBBtn color="secondary" onClick={this.toggle(14)}>
+                  Close
+                </MDBBtn>
+                <MDBBtn color="primary" onClick={this.addData}>
+                  Save changes
+                </MDBBtn>
+              </MDBModalFooter>
+            </MDBModal>
+          </MDBContainer>
         </div>
         <div>
           <MDBTable>
             <MDBTableHead>
-            {this.state.Properties.map(p => (
-              <tr>
+              {this.state.Properties.map(p => (
+                <tr>
+                  <th>{p.F_Name}</th>
+                  <th>{p.M_Name}</th>
+                  <th>{p.L_Name}</th>
+                  <th>{p.C_Id}</th>
+                  <th>{p.U_name}</th>
                   
-                      <th>{p.F_Name}</th>
-                      <th>{p.M_Name}</th>
-                      <th>{p.L_Name}</th>
-                      <th>{p.C_Id}</th>
-                      <th>{p.U_name}</th>
-                      <th>{p.P_Number}</th>
-                 
-              </tr>
-               ))}
+                </tr>
+              ))}
             </MDBTableHead>
             <MDBTableBody>
               {this.state.clothes.map((h, index) => (
@@ -85,7 +153,7 @@ class Customers extends React.Component {
                   <td>{h.Last_Name}</td>
                   <td>{h.Customer_Id}</td>
                   <td>{h.User_Name}</td>
-                  <td>{h.Phone_Number}</td>
+                  
 
                   <tr>
                     <FontAwesomeIcon
@@ -95,7 +163,11 @@ class Customers extends React.Component {
                     />
                   </tr>
                   <tr>
-                    <FontAwesomeIcon className="edit" icon={faEdit} />
+                    <FontAwesomeIcon
+                      className="edit"
+                      icon={faEdit}
+                      onClick={() => this.editData(index)}
+                    />
                   </tr>
                 </tr>
               ))}
