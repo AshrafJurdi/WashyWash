@@ -28,7 +28,7 @@ const SignupForm = () => {
     var firstname = document.querySelector('[name="firstname"]').value;
     var middlename = document.querySelector('[name="middlename"]').value;
     var lastname = document.querySelector('[name="lastname"]').value;
-    var email = document.querySelector('[name="Username"]').value;
+    var email = document.querySelector('[name="email"]').value;
     var pass = document.querySelector('[name="password"]').value;
     var confirmpassword = document.querySelector('[name="confirmpassword"]')
       .value;
@@ -141,9 +141,7 @@ const SignupForm = () => {
                     </label>
                   </div>
                 </div>
-                <div className="text-center mb-4 mt-5">
-                  
-                </div>
+                <div className="text-center mb-4 mt-5" />
               </MDBCardBody>
             </MDBCard>
           </MDBCol>

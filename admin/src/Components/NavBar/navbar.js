@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
-import MaterialTableDemo from "../Orders_Updated/Orders_Updated";
+
 import Orders from "../Orders/Orders.test";
 import { BrowserRouter } from "react-router-dom";
 import { MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
@@ -139,11 +139,7 @@ class Navbar extends React.Component {
             </Nav.Link>
           </Nav.Item>
         </Nav>
-        {this.state.toggleOrders && (
-          <div>
-            <MaterialTableDemo />
-          </div>
-        )}
+
         {this.state.toggleCustomers && (
           <div>
             <p>sojdhfkl</p>

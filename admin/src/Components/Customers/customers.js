@@ -27,8 +27,7 @@ class Customers extends React.Component {
           M_Name: "Middle Name",
           L_Name: "Last Name",
           C_Id: "Customer Id",
-          U_name: "Username",
-          
+          U_name: "Username"
         }
       ],
       clothes: [
@@ -37,16 +36,14 @@ class Customers extends React.Component {
           Middle_Name: "Jeans",
           Last_Name: "33",
           Customer_Id: "55",
-          User_Name: "fh",
-          
+          User_Name: "fh"
         },
         {
           First_Name: "Samir",
           Middle_Name: "skirt",
           Last_Name: "22",
           Customer_Id: "2",
-          User_Name: "kksf",
-          
+          User_Name: "kksf"
         }
       ],
       modal14: false
@@ -82,19 +79,20 @@ class Customers extends React.Component {
     this.setState({ datas });
   };
 
-  addData = () => {
-    let Info = this.state.clothes;
+  addData = e => {
+    e.preventDefault();
+    let Info = [...this.state.clothes];
+    console.log(e.target);
     var a = {
-      First_Name: "",
-      Middle_Name: "",
-      Last_Name: "",
-      Customer_Id: "",
-      User_Name: "",
-     
+      First_Name: e.target.firstname.value,
+      Middle_Name: e.target.middlename.value,
+      Last_Name: e.target.lastname.value,
+      Customer_Id: e.target.id.value,
+      User_Name: e.target.username.value
     };
-
+    console.log();
     Info.push(a);
-    this.setState({ Info });
+    this.setState({ clothes: Info });
   };
 
   render() {
@@ -118,16 +116,35 @@ class Customers extends React.Component {
                 Add A Customer
               </MDBModalHeader>
               <MDBModalBody>
-                <SignupForm />
+                {/* <SignupForm /> */}
+                <form onSubmit={this.addData}>
+                  <MDBInput
+                    hint="Your First Name"
+                    type="text"
+                    name="firstname"
+                  />
+                  <MDBInput
+                    hint="Your Middle Name"
+                    type="text"
+                    name="middlename"
+                  />
+                  <MDBInput hint="Your Last Name" type="text" name="lastname" />
+                  <MDBInput
+                    hint="Your UserName"
+                    type="text"
+                    name="username"
+                    required
+                  />
+                  <MDBInput hint="Customer ID" type="number" name="id" />
+                  <MDBBtn type="submit" value="submit" color="primary">
+                    Submit
+                  </MDBBtn>
+                  <MDBBtn color="secondary" onClick={this.toggle(14)}>
+                    Close
+                  </MDBBtn>
+                </form>
               </MDBModalBody>
-              <MDBModalFooter>
-                <MDBBtn color="secondary" onClick={this.toggle(14)}>
-                  Close
-                </MDBBtn>
-                <MDBBtn color="primary" onClick={this.addData}>
-                  Save changes
-                </MDBBtn>
-              </MDBModalFooter>
+              <MDBModalFooter />
             </MDBModal>
           </MDBContainer>
         </div>
@@ -141,7 +158,6 @@ class Customers extends React.Component {
                   <th>{p.L_Name}</th>
                   <th>{p.C_Id}</th>
                   <th>{p.U_name}</th>
-                  
                 </tr>
               ))}
             </MDBTableHead>
@@ -153,7 +169,6 @@ class Customers extends React.Component {
                   <td>{h.Last_Name}</td>
                   <td>{h.Customer_Id}</td>
                   <td>{h.User_Name}</td>
-                  
 
                   <tr>
                     <FontAwesomeIcon
