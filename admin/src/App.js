@@ -17,7 +17,7 @@ function App() {
       {/* <Header />
       <Overview />
       <NavBar /> */}
-      <Customers />
+      <Users />
       {/* <Orders_Updated /> */}
       {/* <Users /> */}
       {/* <Products />
