@@ -21,7 +21,8 @@ function App() {
   return (
     <div className="App">
       <LandingPage />
-      <User_Popup />
+     
+      
       {/* <Router>
 				<Route  exact path="/" component = {Home}></Route>
 				

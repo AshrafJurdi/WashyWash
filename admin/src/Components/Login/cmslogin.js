@@ -37,7 +37,7 @@ const CMSLoginForm = () => {
                 </MDBRow>
               </div>
               <MDBCardBody className="mx-4 mt-4">
-                <h1>{login.password}</h1>
+                
                 <MDBInput
                   label="Your email"
                   group

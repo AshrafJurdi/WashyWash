@@ -1,20 +1,29 @@
 import React from "react";
-// import { Route, withRouter } from "react-router-dom";
-// import logo from "./logo.svg";
-// import "./App.css";
-// import Orders_Updated from "./Components/Orders_Updated/Orders_Updated";
-// import Users from "./Components/Users/Users";
+import "./App.css";
+import Header from "./Components/Header/header";
+import NavBar from "./Components/NavBar/navbar";
+
 import Products from "./Components/Products/Products";
 // import User_Popup from "../../front/src/components/User_Popup/User_Popup.test";
-
-// import Orders from "./Components/Orders/Orders.test";
-// import CMSLoginForm from "./Components/Login/cmslogin";
+import CMSLoginForm from "./Components/Login/cmslogin";
+import ChooseProducts from "./Components/Choose Products/chooseProducts";
+import Users from "./Components/Users/Users";
+import Orders from "./Components/Orders/Orders.test";
+import Customers from "./Components/Customers/customers.js";
 
 function App() {
   return (
     <div className="App">
-      {/* <Route path="/" render={props => <Products {...props} />} /> */}
-      <Products />
+      {/* <Customers /> */}
+      <Orders />
+      {/* <Header />
+      <Overview />
+      <NavBar /> */}
+      {/* <Users /> */}
+      {/* <Orders_Updated /> */}
+      {/* <Users /> */}
+      {/* <Products /> */}
+      {/* <CMSLoginForm /> */}
     </div>
   );
 }

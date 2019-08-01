@@ -11,7 +11,7 @@ import {
   MDBModalFooter,
   MDBInput
 } from "mdbreact";
-import "./Orders.css";
+import "./customers.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import SignupForm from "../SignUp/signup.js";
@@ -23,30 +23,27 @@ class Customers extends React.Component {
     this.state = {
       Properties: [
         {
-          Order: "Order#",
-          User: "Username",
-          Date: "Date",
-          Priority: "Priority",
-          Status: "Status",
-          Notes: "Notes"
+          F_Name: "First Name",
+          M_Name: "Middle Name",
+          L_Name: "Last Name",
+          C_Id: "Customer Id",
+          U_name: "Username"
         }
       ],
       clothes: [
         {
-          Order: "5",
-          User: "mark101",
-          Date: "2005",
-          Priority: "low",
-          Status: "pending",
-          Notes: "note......"
+          First_Name: "Omar",
+          Middle_Name: "Jeans",
+          Last_Name: "33",
+          Customer_Id: "55",
+          User_Name: "fh"
         },
         {
-          Order: "3",
-          User: "steve404",
-          Date: "2018",
-          Priority: "high",
-          Status: "delivered",
-          Notes: "note......"
+          First_Name: "Samir",
+          Middle_Name: "skirt",
+          Last_Name: "22",
+          Customer_Id: "2",
+          User_Name: "kksf"
         }
       ],
       modal14: false
@@ -77,8 +74,8 @@ class Customers extends React.Component {
   editData = index => {
     let datas = this.state.clothes;
 
-    datas[index].Order = prompt("Please edit Order#");
-    datas[index].User = prompt("Please edit UserName");
+    datas[index].First_Name = prompt("Please edit First Name");
+    datas[index].Middle_Name = prompt("Please edit Middle Name");
     this.setState({ datas });
   };
 
@@ -87,12 +84,11 @@ class Customers extends React.Component {
     let Info = [...this.state.clothes];
     console.log(e.target);
     var a = {
-      Order: e.target.order.value,
-      User: e.target.user.value,
-      Date: e.target.date.value,
-      Priority: e.target.priority.value,
-      Status: e.target.status.value,
-      Notes: e.target.note.value
+      First_Name: e.target.firstname.value,
+      Middle_Name: e.target.middlename.value,
+      Last_Name: e.target.lastname.value,
+      Customer_Id: e.target.id.value,
+      User_Name: e.target.username.value
     };
     console.log();
     Info.push(a);
@@ -109,7 +105,7 @@ class Customers extends React.Component {
               color="primary"
               onClick={this.toggle(14)}
             >
-              Add Order
+              Add Customer
             </MDBBtn>
             <MDBModal
               isOpen={this.state.modal14}
@@ -122,23 +118,25 @@ class Customers extends React.Component {
               <MDBModalBody>
                 {/* <SignupForm /> */}
                 <form onSubmit={this.addData}>
-                  <MDBInput hint="Order#" type="number" name="order" required />
-                  <MDBInput hint="Username" type="text" name="user" required />
-                  <MDBInput hint="Date" type="number" name="date" required />
                   <MDBInput
-                    hint="Priority"
+                    hint="Your First Name"
                     type="text"
-                    name="priority"
-                    required
+                    name="firstname"
                   />
                   <MDBInput
-                    hint="Status"
-                    type="number"
-                    name="status"
+                    hint="Your Middle Name"
+                    type="text"
+                    name="middlename"
+                  />
+                  <MDBInput hint="Your Last Name" type="text" name="lastname" />
+                  <MDBInput
+                    hint="Your UserName"
+                    type="text"
+                    name="username"
                     required
                   />
-                  <MDBInput hint="Note" type="text" name="note" />
-                  <MDBBtn type="Note" value="submit" color="primary">
+                  <MDBInput hint="Customer ID" type="number" name="id" />
+                  <MDBBtn type="submit" value="submit" color="primary">
                     Submit
                   </MDBBtn>
                   <MDBBtn color="secondary" onClick={this.toggle(14)}>
@@ -155,24 +153,23 @@ class Customers extends React.Component {
             <MDBTableHead>
               {this.state.Properties.map(p => (
                 <tr>
-                  <th>{p.Order}</th>
-                  <th>{p.User}</th>
-                  <th>{p.Date}</th>
-                  <th>{p.Priority}</th>
-                  <th>{p.Status}</th>
-                  <th>{p.Notes}</th>
+                  <th>{p.F_Name}</th>
+                  <th>{p.M_Name}</th>
+                  <th>{p.L_Name}</th>
+                  <th>{p.C_Id}</th>
+                  <th>{p.U_name}</th>
                 </tr>
               ))}
             </MDBTableHead>
             <MDBTableBody>
               {this.state.clothes.map((h, index) => (
                 <tr>
-                  <td>{h.Order}</td>
-                  <td>{h.User}</td>
-                  <td>{h.Date}</td>
-                  <td>{h.Priority}</td>
-                  <td>{h.Status}</td>
-                  <td>{h.Notes}</td>
+                  <td>{h.First_Name}</td>
+                  <td>{h.Middle_Name}</td>
+                  <td>{h.Last_Name}</td>
+                  <td>{h.Customer_Id}</td>
+                  <td>{h.User_Name}</td>
+
                   <tr>
                     <FontAwesomeIcon
                       className="svg-inline--fa.fa-w-14"
