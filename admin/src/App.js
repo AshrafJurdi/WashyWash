@@ -14,16 +14,18 @@ import Customers from "./Components/Customers/customers.js";
 function App() {
   return (
     <div className="App">
+      {/* <Customers /> */}
+      <Orders />
       {/* <Header />
       <Overview />
       <NavBar /> */}
-      <MaterialTableDemo />
+      {/* <Users /> */}
       {/* <Orders_Updated /> */}
       {/* <Users /> */}
-      {/* <Products />
-      <CMSLoginForm /> */}
+      {/* <Products /> */}
+      {/* <CMSLoginForm /> */}
     </div>
   );
 }
-
 export default App;
+// export default withRouter(App);

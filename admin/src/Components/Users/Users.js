@@ -1,26 +1,42 @@
-import React, { useState } from "react";
+import React from "react";
 import MaterialTable from "material-table";
 
 export default function MaterialTableDemo() {
-  const [state, setState] = useState({
+  const [state, setState] = React.useState({
     columns: [
-      { title: "Employee Name", field: "employee_name" },
+      { title: "Name", field: "name" },
+      { title: "Surname", field: "surname" },
       { title: "Position", field: "position" },
-      { title: "Username", field: "user_name" }
+      { title: "Email", field: "email" },
+      { title: "Password", field: "password" },
+      { title: "Phone Number", field: "phoneNumber" },
+      { title: "Address", field: "address" }
     ],
     data: [
-      { employee_name: "Mark", position: "Consultant", user_name: "Mark807" },
       {
-        employee_name: "Richard",
-        position: "Manager",
-        user_name: "Richard901"
+        name: "Mehmet",
+        surname: "Baran",
+        position: 1987,
+        email: 63,
+        password: "whatever",
+        phoneNumber: 90293930,
+        address: "jahjsh,iahsha "
+      },
+      {
+        name: "Mehmet",
+        surname: "Baran",
+        position: 1987,
+        email: 63,
+        password: "whatever",
+        phoneNumber: 90293930,
+        address: "jahjsh,iahsha "
       }
     ]
   });
 
   return (
     <MaterialTable
-      title="Users"
+      title="Editable Example"
       columns={state.columns}
       data={state.data}
       editable={{
