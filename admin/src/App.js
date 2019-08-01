@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./Components/Header/header";
 import NavBar from "./Components/NavBar/navbar";
-
+import MaterialTableDemo from "./Components/Customers/customers_update.js"
 import Products from "./Components/Products/Products";
 // import User_Popup from "../../front/src/components/User_Popup/User_Popup.test";
 import CMSLoginForm from "./Components/Login/cmslogin";
@@ -17,7 +17,7 @@ function App() {
       {/* <Header />
       <Overview />
       <NavBar /> */}
-      <Customers />
+      <MaterialTableDemo />
       {/* <Orders_Updated /> */}
       {/* <Users /> */}
       {/* <Products />
