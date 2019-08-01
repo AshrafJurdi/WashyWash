@@ -10,14 +10,15 @@ import ChooseProducts from "./Components/Choose Products/chooseProducts";
 import Users from "./Components/Users/Users";
 import Orders from "./Components/Orders/Orders.test";
 import Customers from "./Components/Customers/customers.js";
-
+import Data from "./Components/Data/data";
 function App() {
   return (
     <div className="App">
       {/* <Header />
       <Overview />
-      <NavBar /> */}
-      <Users />
+     */}
+      <Header />
+      <NavBar />
       {/* <Orders_Updated /> */}
       {/* <Users /> */}
       {/* <Products />
