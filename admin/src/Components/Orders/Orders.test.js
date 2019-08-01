@@ -17,9 +17,16 @@ import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import SignupForm from "../SignUp/signup.js";
 import "../SignUp/signup.css";
 
-class Customers extends React.Component {
+/**this is a react class for customers
+ *
+ *
+ * @class Customers
+ * @extends {React.Component}
+ */
+class Orders extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       Properties: [
         {
@@ -51,6 +58,7 @@ class Customers extends React.Component {
       ],
       modal14: false
     };
+
     // ----------------------------------------------------------------------------------
     // this.state = {
 
@@ -60,6 +68,11 @@ class Customers extends React.Component {
     //  }
   }
 
+  /**toggle function
+   *
+   *
+   * @memberof Orders
+   */
   toggle = nr => () => {
     let modalNumber = "modal" + nr;
     this.setState({
@@ -67,6 +80,11 @@ class Customers extends React.Component {
     });
   };
 
+  /**function that deletes a row in the orders table
+   *
+   *
+   * @memberof Orders
+   */
   deleteData = index => {
     let data = this.state.clothes;
     delete data[index];
@@ -74,6 +92,11 @@ class Customers extends React.Component {
     console.log(data);
   };
 
+  /**edit function that edits an order in the table
+   *
+   *
+   * @memberof Orders
+   */
   editData = index => {
     let datas = this.state.clothes;
 
@@ -82,6 +105,11 @@ class Customers extends React.Component {
     this.setState({ datas });
   };
 
+  /**adddata function that adds a row to the orders table
+   *
+   *
+   * @memberof Orders
+   */
   addData = e => {
     e.preventDefault();
     let Info = [...this.state.clothes];
@@ -99,9 +127,15 @@ class Customers extends React.Component {
     this.setState({ clothes: Info });
   };
 
+  /**
+   *
+   *
+   * @returns content of Orders.test Component
+   * @memberof Orders
+   */
   render() {
     return (
-      <div className="layout">
+      <div className="layout_orders">
         <div>
           <MDBContainer>
             <MDBBtn
@@ -182,7 +216,7 @@ class Customers extends React.Component {
                   </tr>
                   <tr>
                     <FontAwesomeIcon
-                      className="edit"
+                      className="edit_orders"
                       icon={faEdit}
                       onClick={() => this.editData(index)}
                     />
@@ -197,4 +231,4 @@ class Customers extends React.Component {
   }
 }
 
-export default Customers;
+export default Orders;

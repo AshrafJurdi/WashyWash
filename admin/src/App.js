@@ -15,14 +15,14 @@ function App() {
   return (
     <div className="App">
       {/* <Customers /> */}
-      <Orders />
+      {/* <Orders /> */}
       {/* <Header />
       <Overview />
       <NavBar /> */}
       {/* <Users /> */}
       {/* <Orders_Updated /> */}
       {/* <Users /> */}
-      {/* <Products /> */}
+      <Products />
       {/* <CMSLoginForm /> */}
     </div>
   );

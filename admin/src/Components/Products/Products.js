@@ -3,6 +3,13 @@ import { Card, CardDeck, Button, ButtonToolbar, Form } from "react-bootstrap";
 import "../Products/Products.css";
 import axios from "axios";
 
+/**Products class
+ *
+ *
+ * @export
+ * @class Products
+ * @extends {React.Component}
+ */
 export default class Products extends React.Component {
   constructor(props) {
     super(props);
@@ -28,6 +35,12 @@ export default class Products extends React.Component {
       ]
     };
   }
+
+  /**function that deletes a product card
+   *
+   *
+   * @memberof Products
+   */
   deleteProducts = index => {
     let clothes = this.state.clothes;
 
@@ -35,6 +48,12 @@ export default class Products extends React.Component {
 
     this.setState({ clothes });
   };
+
+  /**function that edits a product card
+   *
+   *
+   * @memberof Products
+   */
   editProducts = index => {
     let clothes = [...this.state.clothes];
 
@@ -48,9 +67,21 @@ export default class Products extends React.Component {
 
     this.setState({ clothes });
   };
+
+  /**function that toggles the popup box
+   *
+   *
+   * @memberof Products
+   */
   showPop = () => {
     this.setState({ toggleMainPage: true });
   };
+
+  /**
+   *function that adds a product card
+   *
+   * @memberof Products
+   */
   addProducts = e => {
     let clothes = this.state.clothes;
     e.preventDefault();
@@ -63,6 +94,12 @@ export default class Products extends React.Component {
 
     // this.props.history.push("/#");
   };
+
+  /**function for uploading images
+   *
+   *
+   * @memberof Products
+   */
   fileSelectHandler = event => {
     this.setState({
       selectedFile: event.target.files[0]
@@ -88,6 +125,12 @@ export default class Products extends React.Component {
   //     });
   // };
 
+  /**returns content of Products.js Component
+   *
+   *
+   * @returns
+   * @memberof Products
+   */
   render() {
     return (
       <div className="Products">

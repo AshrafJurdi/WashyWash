@@ -20,16 +20,16 @@ import LandingPage from "./pages/Landing Page/landingPage";
 function App() {
   return (
     <div className="App">
-      <LandingPage />
-     
-      
+      {/* <LandingPage /> */}
+
+      <About_Us />
       {/* <Router>
 				<Route  exact path="/" component = {Home}></Route>
 				
       </Router> */}
       {/* <About_Us_Updated /> */}
-      <Navbar />
-      <User_Popup />
+      {/* <Navbar />
+      <User_Popup /> */}
     </div>
   );
 }
