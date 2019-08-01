@@ -4,7 +4,11 @@ import Flippy, { FrontSide, BackSide } from "react-flippy";
 import mission from "../../assets/images/mission.png";
 import history from "../../assets/images/histo.ico";
 import vision from "../../assets/images/vision.png";
-
+/**
+ *sets the state containing the content of about_us(title,image,description)
+ *
+ * @returns
+ */
 const About_Us = () => {
   const [services, setServices] = useState([
     {

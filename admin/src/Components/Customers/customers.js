@@ -46,16 +46,83 @@ class Customers extends React.Component {
           User_Name: "kksf"
         }
       ],
-      modal14: false
-    };
-    // ----------------------------------------------------------------------------------
-    // this.state = {
+      modal14: false,
 
-    //     Rows: ["First Name","Middle Name", "Last Name", "Customer ID"," Username", "Phone Number"],
-    //     Data: ["Omar","Samir","Mohammad", "1890765","Omar700","+961 78 871 488"],
-    //     Data_Two: ["Omar","Samir","Mohammad", "1890765","Omar700","+961 78 871 488"]
-    //  }
+      filteredCustomers: []
+    };
   }
+
+  componentDidMount() {
+    const filteredCustomers = [...this.state.clothes];
+    this.setState({ filteredCustomers });
+  }
+
+  sortBySelect = e => {
+    const sortBy = e.target.value;
+    if (sortBy === "none") return;
+    var filteredCustomers = [...this.state.filteredCustomers];
+
+    function compareLastName(a, b) {
+      
+      const  LastNameA = a.L_Name.toUpperCase();
+      const  LastNameB = b.L_Name.toUpperCase();
+
+      let comparison = 0;
+      if ( LastNameA >  LastNameB) {
+        comparison = 1;
+      } else if ( LastNameA <  LastNameB) {
+        comparison = -1;
+      }
+      return comparison;
+    }
+
+    function compareFirstName(a, b) {
+      // Use toUpperCase() to ignore character casing
+      const First_NameA = a.First_Name.toUpperCase();
+      const First_NameB = b.First_Name.toUpperCase();
+
+      let comparison = 0;
+      if (First_NameA > First_NameB) {
+        comparison = 1;
+      } else if (First_NameA < First_NameB) {
+        comparison = -1;
+      }
+      return comparison;
+    }
+
+    // this.sortBySelect = e => {
+    //   const sortBy = e.target.value;
+    //   if(sortBy === "none") return;
+    //   var filteredCustomers = [...this.state.filteredCustomers];
+    //   function compareMiddleName(a,b) {
+
+    //     const Mid
+    //   }
+    // }
+
+    filteredCustomers.sort(
+      sortBy === "Last_Name" ? compareLastName :compareFirstName
+    );
+    this.setState({
+      filteredCustomers
+    });  
+  };
+
+  
+
+
+  filterName = e => {
+    e.preventDefault();
+    const name = e.target.value.toUpperCase();
+    var filteredCustomers;
+    filteredCustomers = this.state.filteredCustomers.filter(c => {
+      return (
+        c.First_Name.toUpperCase().includes(name) ||
+        c.Last_Name.toUpperCase().includes(name)
+      );
+    });
+    this.setState({ filteredCustomers });
+  };
 
   toggle = nr => () => {
     let modalNumber = "modal" + nr;
@@ -76,7 +143,10 @@ class Customers extends React.Component {
 
     datas[index].First_Name = prompt("Please edit First Name");
     datas[index].Middle_Name = prompt("Please edit Middle Name");
-    this.setState({ datas });
+    datas[index].Last_Name = prompt("Please edit Last Name");
+    datas[index].User_Name = prompt("Please edit User Name");
+    datas[index].Customer_Id= prompt("Please edit Customer ID");
+    this.setState({ clothes:datas });
   };
 
   addData = e => {
@@ -97,6 +167,32 @@ class Customers extends React.Component {
 
   render() {
     return (
+      <div>
+      <div>
+      <fieldset>
+          <legend>
+            <b>Sort and Filter Data</b>
+          </legend>
+          <p>
+            <label>Sort By: </label>
+            <select id="myList" onChange={this.sortBySelect}>
+              <option value="none">----</option>
+              <option value="fname">First Name</option>
+              <option value="lname">Last Name</option>
+            </select>
+          </p>
+          <input
+            type="text"
+            name="nameFilter"
+            placeholder="name"
+            onChange={this.filterName}
+          />
+        </fieldset>
+
+
+
+
+      </div>
       <div className="layout">
         <div>
           <MDBContainer>
@@ -189,6 +285,7 @@ class Customers extends React.Component {
             </MDBTableBody>
           </MDBTable>
         </div>
+      </div>
       </div>
     );
   }
