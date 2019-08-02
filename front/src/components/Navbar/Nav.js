@@ -16,7 +16,12 @@ import logo from "../../assets/images/logo.png";
 import "../Navbar/Nav.css";
 import About_Us from "..//About_Us/About_Us.test";
 import "../User_Popup/User_Popup.css";
-
+/**
+ * @param  {} props
+ * @param  {} {super(props
+ * @param  {false} ;this.state={collapse
+ * @param  {false};this.onClick=this.onClick.bind(this} isWideEnough
+ */
 class Navbar extends React.Component {
   constructor(props) {
     super(props);

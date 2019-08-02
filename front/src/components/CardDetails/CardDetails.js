@@ -15,7 +15,9 @@ import {
   MDBCardText,
   MDBCol
 } from "mdbreact";
-
+/**
+ * @param  {!this.state[modalNumber]}} =>{letmodalNumber="modal"+nr;this.setState({[modalNumber]
+ */
 class CardDetails extends React.Component {
   state = {
     modal14: false,

@@ -12,7 +12,10 @@ import {
   MDBView,
   MDBBtn
 } from "mdbreact";
-
+/**
+ * @param  {} {return(<divclassName="animation"><MDBMaskoverlay="white"className="flex-centerflex-columntext-whitetext-center"><imgclassName="center"src={require("../../assets/images/washy.png"
+ * @param  {} }/><h1className="text-1">WeSpin</h1><h1className="text-2">YourWorld</h1></MDBMask></div>
+ */
 export default class Animation extends React.Component {
   render() {
     return (

@@ -1,6 +1,32 @@
 import React from 'react';
 import MaterialTable from 'material-table';
-
+/**
+ * @param  {} {const[state
+ * @param  {[{title:'FirstName'} setState]=React.useState({columns
+ * @param  {'FirstName'}} field
+ * @param  {'MiddleName'} {title
+ * @param  {'MiddleName'}} field
+ * @param  {'LastName'} {title
+ * @param  {'LastName'}} field
+ * @param  {'UserName'} {title
+ * @param  {'UserName'}} field
+ * @param  {'CustomerID'} {title
+ * @param  {'CustomerID'}} field
+ * @param  {} ]
+ * @param  {[{FirstName:'Mehmet'} data
+ * @param  {"batata"} MiddleName
+ * @param  {'Baran'} LastName
+ * @param  {"booo"} UserName
+ * @param  {"2000"}} CustomerID
+ * @param  {'ZeryaBetül'} {FirstName
+ * @param  {"efkjfj"} MiddleName
+ * @param  {'Baran'} LastName
+ * @param  {"Zerya2017"} UserName
+ * @param  {"34"} CustomerID
+ * @param  {} }
+ * @param  {} ]
+ * @param  {} }
+ */
 export default function MaterialTableDemo() {
   const [state, setState] = React.useState({
     columns: [
@@ -28,6 +54,16 @@ export default function MaterialTableDemo() {
       columns={state.columns}
       data={state.data}
       editable={{
+        /**Pushes new data to the state
+         * @param  {} resolve=>{setTimeout((
+         * @param  {} =>{resolve(
+         * @param  {} ;constdata=[...state.data];data.push(newData
+         * @param  {} ;setState({...state
+         * @param  {} data}
+         * @param  {} ;}
+         * @param  {} 600
+         */
+        
         onRowAdd: newData =>
           new Promise(resolve => {
             setTimeout(() => {
@@ -37,6 +73,18 @@ export default function MaterialTableDemo() {
               setState({ ...state, data });
             }, 600);
           }),
+        /** Edits new data to the state
+         * @param  {} newData
+         * @param  {} oldData
+         * @param  {} =>newPromise(resolve=>{setTimeout((
+         * @param  {} =>{resolve(
+         * @param  {} ;constdata=[...state.data];data[data.indexOf(oldData
+         * @param  {} ]=newData;setState({...state
+         * @param  {} data}
+         * @param  {} ;}
+         * @param  {} 600
+         * @param  {} ;}
+         */
         onRowUpdate: (newData, oldData) =>
           new Promise(resolve => {
             setTimeout(() => {
@@ -46,6 +94,17 @@ export default function MaterialTableDemo() {
               setState({ ...state, data });
             }, 600);
           }),
+        /**Deletes Data from the state
+         * @param  {} resolve=>{setTimeout((
+         * @param  {} =>{resolve(
+         * @param  {} ;constdata=[...state.data];data.splice(data.indexOf(oldData
+         * @param  {} 1
+         * @param  {} ;setState({...state
+         * @param  {} data}
+         * @param  {} ;}
+         * @param  {} 600
+         * @param  {} ;}
+         */
         onRowDelete: oldData =>
           new Promise(resolve => {
             setTimeout(() => {
