@@ -2,6 +2,10 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 
 import Orders from "../Orders/Orders.test";
+import Customers from "../Customers/customers";
+import Users from "../Users/Users";
+import Data from "../Data/data";
+import Products from "../Products/Products";
 import { BrowserRouter } from "react-router-dom";
 import { MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
 
@@ -51,17 +55,7 @@ class Navbar extends React.Component {
       toggleProducts: false
     });
   };
-  contactPage = () => {
-    this.setState({
-      toggleOrders: false,
-      toggleCustomers: false,
-      toggleLandingPage: false,
-      toggleContactPage: true,
-      toggleUsers: false,
-      toggleData: false,
-      toggleProducts: false
-    });
-  };
+
   users = () => {
     this.setState({
       toggleOrders: false,
@@ -115,11 +109,6 @@ class Navbar extends React.Component {
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-3" onSelect={() => this.contactPage()}>
-              Contact Page
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
             <Nav.Link eventKey="admin" disabled onSelect={() => this.users()}>
               Users
             </Nav.Link>
@@ -139,17 +128,33 @@ class Navbar extends React.Component {
             </Nav.Link>
           </Nav.Item>
         </Nav>
-
         {this.state.toggleCustomers && (
           <div>
-            <p>sojdhfkl</p>
+            <Orders />
           </div>
         )}
-        {this.state.toggleLandingPage && <div>aer</div>}
-        {this.state.toggleContactPage && <div>saddfg</div>}
-        {this.state.toggleUsers && <div>sdg</div>}
-        {this.state.toggleData && <div>sgh</div>}
-        {this.state.toggleProducts && <div>dhgj</div>}
+        {this.state.toggleCustomers && (
+          <div>
+            <Customers />
+          </div>
+        )}
+        {this.state.toggleLandingPage && <div>Landing Page</div>}
+
+        {this.state.toggleUsers && (
+          <div>
+            <Users />
+          </div>
+        )}
+        {this.state.toggleData && (
+          <div>
+            <Data />
+          </div>
+        )}
+        {this.state.toggleProducts && (
+          <div>
+            <Products />
+          </div>
+        )}
       </div>
     );
   }

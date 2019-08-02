@@ -1,4 +1,4 @@
-.layout {
+.layout_orders {
   margin: 20px;
 }
 
@@ -10,6 +10,6 @@
   cursor: pointer;
 }
 
-.edit {
+.edit_orders {
   cursor: pointer;
 }

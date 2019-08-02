@@ -16,6 +16,7 @@
     "mdbreact": "^4.18.1",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.10",
+    "react-chart-histogram": "^0.2.4",
     "react-contenteditable": "^3.3.1",
     "react-datepicker": "^2.8.0",
     "react-dom": "^16.8.6",

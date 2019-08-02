@@ -23,8 +23,12 @@
   "dependencies": {
     "@babel/core": "^7.5.5",
     "concurrently": "^4.1.1",
+<<<<<<< HEAD
+    "jsdoc": "^3.6.3",
+=======
     "draft-js": "^0.11.0",
     "draft-js-plugins-editor": "^2.1.1",
+>>>>>>> 7127f97d887ee854de06c5be23f16fe2d5103392
     "material-table": "^1.40.1",
     "node-gyp": "^5.0.3",
     "nodemon": "^1.19.1",
